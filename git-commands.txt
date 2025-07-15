@@ -1,0 +1,153 @@
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Chethana G/Downloads/Programs/July15/.git/
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (master)
+$ git add .
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (master)
+$ git commit -m "message"
+[master (root-commit) ffe85ff] message
+ 1 file changed, 2 insertions(+)
+ create mode 100644 day2.txt
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (master)
+$ git branch -M main
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git remote add origin https://github.com/Chethanag18/practice1.git
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 235 bytes | 235.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Chethanag18/practice1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git clone https://github.com/Chethanag18/practice1.git
+Cloning into 'practice1'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 961 bytes | 80.00 KiB/s, done.
+From https://github.com/Chethanag18/practice1
+   ffe85ff..ed0cd2a  main       -> origin/main
+Updating ffe85ff..ed0cd2a
+Fast-forward
+ file2 | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git branch test
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git branch
+* main
+  test
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (main)
+$ git checkout test
+Switched to branch 'test'
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git merge main
+Already up to date.
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git remote -v
+origin  https://github.com/Chethanag18/practice1.git (fetch)
+origin  https://github.com/Chethanag18/practice1.git (push)
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git fetch
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git reset file2.txt
+fatal: ambiguous argument 'file2.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git reset file2
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git reset --hard <commit>
+bash: syntax error near unexpected token `newline'
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git log --oneline
+ed0cd2a (HEAD -> test, origin/main, main) Create file2
+ffe85ff message
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git fetch
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git reset file3
+fatal: ambiguous argument 'file3': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git tag
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git tag hello
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git tag -a hello -m "message"
+fatal: tag 'hello' already exists
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git tag -a hii -m "message"
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git push origin hello
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Chethanag18/practice1.git
+ * [new tag]         hello -> hello
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git stash
+No local changes to save
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$ git cherry-pick main
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch test
+You are currently cherry-picking commit ed0cd2a.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        practice1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test|CHERRY-PICKING)
+$ git cherry-pick --skip
+
+Chethana G@LAPTOP-SCLV1140 MINGW64 ~/Downloads/Programs/July15 (test)
+$
